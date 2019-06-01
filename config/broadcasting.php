@@ -31,13 +31,18 @@ return [
     'connections' => [
 
         'pusher' => [
-            'driver' => 'pusher',
+            'driver' => env('BROADCAST_DRIVER'),
             'key' => env('PUSHER_APP_KEY'),
             'secret' => env('PUSHER_APP_SECRET'),
             'app_id' => env('PUSHER_APP_ID'),
             'options' => [
                 'cluster' => env('PUSHER_APP_CLUSTER'),
-                'encrypted' => true,
+                'encrypted' => false, // for pusher or custom https pusher (default is false). for pusher required true (true for SSL)
+
+                // for beyondcode/laravel-websockets
+//                'host' => '127.0.0.1', // 'laravel-websockets.local', or our site like 'example.com'
+//                'port' => 6001,
+//                'scheme' => 'http', // for SSL
             ],
         ],
 
