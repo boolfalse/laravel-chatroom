@@ -2,6 +2,10 @@
 
 return [
 
+    'dev_name' => env('DEV_NAME'),
+    'dev_email' => env('DEV_EMAIL'),
+    'dev_password' => env('DEV_PASSWORD'),
+
     /*
     |--------------------------------------------------------------------------
     | Application Name
