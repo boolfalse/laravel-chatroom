@@ -2,71 +2,100 @@
 
 namespace App\Http\Controllers\Auth;
 
-use App\Models\User;
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Validator;
+use App\Models\User;
+use Faker\Factory;
+use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Mail;
+use Illuminate\Http\Request;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Support\Facades\Validator;
 
 class RegisterController extends Controller
 {
-    /*
-    |--------------------------------------------------------------------------
-    | Register Controller
-    |--------------------------------------------------------------------------
-    |
-    | This controller handles the registration of new users as well as their
-    | validation and creation. By default this controller uses a trait to
-    | provide this functionality without requiring any additional code.
-    |
-    */
-
     use RegistersUsers;
 
-    /**
-     * Where to redirect users after registration.
-     *
-     * @var string
-     */
     protected $redirectTo = '/home';
 
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
     public function __construct()
     {
+        parent::__construct();
+
         $this->middleware('guest');
     }
 
-    /**
-     * Get a validator for an incoming registration request.
-     *
-     * @param  array  $data
-     * @return \Illuminate\Contracts\Validation\Validator
-     */
-    protected function validator(array $data)
+    public function showRegistrationForm()
     {
-        return Validator::make($data, [
-            'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'password' => ['required', 'string', 'min:8', 'confirmed'],
-        ]);
+        return view('auth.register');
     }
 
-    /**
-     * Create a new user instance after a valid registration.
-     *
-     * @param  array  $data
-     * @return \App\Models\User
-     */
-    protected function create(array $data)
+    public function register(Request $request)
     {
-        return User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => Hash::make($data['password']),
+        $validator = Validator::make($request->all(), [
+            'name' => 'required|string|max:100',
+            'email' => 'required|email|unique:users',
+            'password' => 'required|min:6|max:100',
         ]);
+        if ($validator->fails()) {
+            return Redirect::back()->withErrors($validator);
+        }
+
+        $faker = Factory::create('en_US');
+        $email = $request->get('email');
+        $user = User::where('email', $email)->first();
+        $confirm_token = $faker->bothify(str_repeat('*', config('custom.confirm_token_length')));
+
+        if (empty($user))
+        {
+            $user = User::create([
+                'name' => $request->get('name'),
+                'email' => $request->get('email'),
+                'password' => bcrypt($request->get('password')),
+                'confirm_token' => $confirm_token,
+                'status' => User::NOT_CONFIRMED,
+            ]);
+
+            //ss TODO: enable email sending
+//            $response = $this->sendEmail($user->email, config('mail.from.address'), $request->get('name'), $confirm_token);
+            $response = true;
+
+            if($response) {
+                return redirect()->route('login');
+            }
+            else{
+                $user->delete();
+                $validator->getMessageBag()->add('email', "Something is wrong with your entered email address! " . $response['message']);
+
+                return Redirect::back()->withErrors($validator);
+            }
+
+        }
+        else {
+            $validator->getMessageBag()->add('email', "We already have registered user with entered email!");
+
+            return Redirect::back()->withErrors($validator);
+        }
+
     }
+
+    public function sendEmail($to_email, $from_email, $name, $confirm_token): bool
+    {
+        try {
+            Mail::send('emails.email-confirm', [
+                'confirm_token' => $confirm_token,
+            ], function ($message) use ($to_email, $from_email, $name) {
+                $message
+                    ->to($to_email)
+                    ->from($from_email)
+                    ->subject("Email Confirmation for " . config('app.name') . "!");
+            });
+
+            return true;
+        }
+        catch(\Exception $e) {
+            return false;
+        }
+    }
+
 }
+

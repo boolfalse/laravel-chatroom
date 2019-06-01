@@ -2,6 +2,9 @@
 
 return [
 
+    'confirm_token_length' => 60,
+    'image_random_name_length' => 40,
+
     'user_images_folder' => 'users',
     'seed_users_count' => 10, // 10 | 3
 
