@@ -5,16 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="" />
     <meta name="keywords" content="" />
-    <title>Talkshak – chat messenger</title>
-    <link href="{{ asset('talkshak/dist/img/favicon.png') }}" type="image/png" rel="icon">
+    <title>chatroom – chat messenger</title>
+    <link href="{{ asset('chatroom/dist/img/favicon.png') }}" type="image/png" rel="icon">
     
-    <link rel="stylesheet" href="{{ asset('talkshak/dist/css/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('talkshak/dist/css/perfect-scrollbar.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('talkshak/dist/css/themify-icons.css') }}">
-    <link rel="stylesheet" href="{{ asset('talkshak/dist/css/emoji.css') }}">
-    <link rel="stylesheet" href="{{ asset('talkshak/dist/css/style.css') }}">
-    <link rel="stylesheet" href="{{ asset('talkshak/dist/css/responsive.css') }}">
-    <link rel="stylesheet" href="{{ asset('talkshak/dist/css/dark.css') }}" >
+    <link rel="stylesheet" href="{{ asset('chatroom/dist/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('chatroom/dist/css/perfect-scrollbar.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('chatroom/dist/css/themify-icons.css') }}">
+    <link rel="stylesheet" href="{{ asset('chatroom/dist/css/emoji.css') }}">
+    <link rel="stylesheet" href="{{ asset('chatroom/dist/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('chatroom/dist/css/responsive.css') }}">
+    <link rel="stylesheet" href="{{ asset('chatroom/dist/css/dark.css') }}" >
 </head>
 <body>
 <main>
@@ -55,8 +55,8 @@
                     <div class="tab-content">
                         <!-- Start of Contacts -->
                         <div class="tab-pane fade" id="members">
-                            <figure class="setting"><img class="avatar-xl" src="{{ asset('talkshak/dist/img/avatars/avatar-male-1.jpg') }}" alt="avatar"></figure>
-                            <span class="logo"><img alt="" src="{{ asset('talkshak/dist/img/logo.png') }}"></span>
+                            <figure class="setting"><img class="avatar-xl" src="{{ asset('chatroom/dist/img/avatars/avatar-male-1.jpg') }}" alt="avatar"></figure>
+                            <span class="logo"><img alt="" src="{{ asset('chatroom/dist/img/logo.png') }}"></span>
                             <div class="search">
                                 <form class="form-inline position-relative">
                                     <input type="search" class="form-control" id="people" placeholder="Search for people...">
@@ -84,7 +84,7 @@
                                 </div>
                                 <div class="list-group" id="contacts" role="tablist">
                                     <a href="#" class="filterMembers all online contact" data-toggle="list">
-                                        <img class="avatar-md" src="{{ asset('talkshak/dist/img/avatars/avatar-female-1.jpg') }}" data-toggle="tooltip" data-placement="top" title="Sarah" alt="avatar">
+                                        <img class="avatar-md" src="{{ asset('chatroom/dist/img/avatars/avatar-female-1.jpg') }}" data-toggle="tooltip" data-placement="top" title="Sarah" alt="avatar">
                                         <div class="status online"></div>
                                         <div class="data">
                                             <h5>Sarah Dalton</h5>
@@ -95,7 +95,7 @@
                                         </div>
                                     </a>
                                     <a href="#" class="filterMembers all online contact" data-toggle="list">
-                                        <img class="avatar-md" src="{{ asset('talkshak/dist/img/avatars/avatar-male-1.jpg') }}" data-toggle="tooltip" data-placement="top" title="Bob Frank" alt="avatar">
+                                        <img class="avatar-md" src="{{ asset('chatroom/dist/img/avatars/avatar-male-1.jpg') }}" data-toggle="tooltip" data-placement="top" title="Bob Frank" alt="avatar">
                                         <div class="status online"></div>
                                         <div class="data">
                                             <h5>Bob Frank</h5>
@@ -106,7 +106,7 @@
                                         </div>
                                     </a>
                                     <a href="#" class="filterMembers all online contact" data-toggle="list">
-                                        <img class="avatar-md" src="{{ asset('talkshak/dist/img/avatars/avatar-female-2.jpg') }}" data-toggle="tooltip" data-placement="top" title="Lucy" alt="avatar">
+                                        <img class="avatar-md" src="{{ asset('chatroom/dist/img/avatars/avatar-female-2.jpg') }}" data-toggle="tooltip" data-placement="top" title="Lucy" alt="avatar">
                                         <div class="status online"></div>
                                         <div class="data">
                                             <h5>Lucy Grey</h5>
@@ -117,7 +117,7 @@
                                         </div>
                                     </a>
                                     <a href="#" class="filterMembers all online contact" data-toggle="list">
-                                        <img class="avatar-md" src="{{ asset('talkshak/dist/img/avatars/avatar-male-2.jpg') }}" data-toggle="tooltip" data-placement="top" title="james idoms" alt="avatar">
+                                        <img class="avatar-md" src="{{ asset('chatroom/dist/img/avatars/avatar-male-2.jpg') }}" data-toggle="tooltip" data-placement="top" title="james idoms" alt="avatar">
                                         <div class="status online"></div>
                                         <div class="data">
                                             <h5>james idoms</h5>
@@ -128,7 +128,7 @@
                                         </div>
                                     </a>
                                     <a href="#" class="filterMembers all online contact" data-toggle="list">
-                                        <img class="avatar-md" src="{{ asset('talkshak/dist/img/avatars/avatar-female-3.jpg') }}" data-toggle="tooltip" data-placement="top" title="Linda Gates" alt="avatar">
+                                        <img class="avatar-md" src="{{ asset('chatroom/dist/img/avatars/avatar-female-3.jpg') }}" data-toggle="tooltip" data-placement="top" title="Linda Gates" alt="avatar">
                                         <div class="status online"></div>
                                         <div class="data">
                                             <h5>Linda gates</h5>
@@ -139,7 +139,7 @@
                                         </div>
                                     </a>
                                     <a href="#" class="filterMembers all offline contact" data-toggle="list">
-                                        <img class="avatar-md" src="{{ asset('talkshak/dist/img/avatars/avatar-female-5.jpg') }}" data-toggle="tooltip" data-placement="top" title="Karen joye" alt="avatar">
+                                        <img class="avatar-md" src="{{ asset('chatroom/dist/img/avatars/avatar-female-5.jpg') }}" data-toggle="tooltip" data-placement="top" title="Karen joye" alt="avatar">
                                         <div class="status offline"></div>
                                         <div class="data">
                                             <h5>Karen joye</h5>
@@ -150,7 +150,7 @@
                                         </div>
                                     </a>
                                     <a href="#" class="filterMembers all offline contact" data-toggle="list">
-                                        <img class="avatar-md" src="{{ asset('talkshak/dist/img/avatars/avatar-female-6.jpg') }}" data-toggle="tooltip" data-placement="top" title="Lisa Honey" alt="avatar">
+                                        <img class="avatar-md" src="{{ asset('chatroom/dist/img/avatars/avatar-female-6.jpg') }}" data-toggle="tooltip" data-placement="top" title="Lisa Honey" alt="avatar">
                                         <div class="status offline"></div>
                                         <div class="data">
                                             <h5>Lisa Honey</h5>
@@ -161,7 +161,7 @@
                                         </div>
                                     </a>
                                     <a href="#" class="filterMembers all offline contact" data-toggle="list">
-                                        <img class="avatar-md" src="{{ asset('talkshak/dist/img/avatars/avatar-male-3.jpg') }}" data-toggle="tooltip" data-placement="top" title="Daniel Cabral" alt="avatar">
+                                        <img class="avatar-md" src="{{ asset('chatroom/dist/img/avatars/avatar-male-3.jpg') }}" data-toggle="tooltip" data-placement="top" title="Daniel Cabral" alt="avatar">
                                         <div class="status offline"></div>
                                         <div class="data">
                                             <h5>Daniel Cabral</h5>
@@ -172,7 +172,7 @@
                                         </div>
                                     </a>
                                     <a href="#" class="filterMembers all offline contact" data-toggle="list">
-                                        <img class="avatar-md" src="{{ asset('talkshak/dist/img/avatars/avatar-male-4.jpg') }}" data-toggle="tooltip" data-placement="top" title="Jhon Doe" alt="avatar">
+                                        <img class="avatar-md" src="{{ asset('chatroom/dist/img/avatars/avatar-male-4.jpg') }}" data-toggle="tooltip" data-placement="top" title="Jhon Doe" alt="avatar">
                                         <div class="status offline"></div>
                                         <div class="data">
                                             <h5>Jhon Doe</h5>
@@ -188,8 +188,8 @@
                         <!-- End of Contacts -->
                         <!-- Start of Discussions -->
                         <div id="discussions" class="tab-pane fade in active show">
-                            <figure class="setting"><img class="avatar-xl" src="{{ asset('talkshak/dist/img/avatars/avatar-male-1.jpg') }}" alt="avatar"></figure>
-                            <span class="logo"><img src="{{ asset('talkshak/dist/img/logo.png') }}" alt=""></span>
+                            <figure class="setting"><img class="avatar-xl" src="{{ asset('chatroom/dist/img/avatars/avatar-male-1.jpg') }}" alt="avatar"></figure>
+                            <span class="logo"><img src="{{ asset('chatroom/dist/img/logo.png') }}" alt=""></span>
                             <div class="search">
                                 <form class="form-inline position-relative">
                                     <input type="search" class="form-control" id="conversations" placeholder="Search for conversations...">
@@ -216,7 +216,7 @@
                                 </div>
                                 <div class="list-group" id="chats" role="tablist">
                                     <a href="#list-chat" class="filterDiscussions all unread single active" id="list-chat-list" data-toggle="list" role="tab">
-                                        <img class="avatar-md" src="{{ asset('talkshak/dist/img/avatars/avatar-female-1.jpg') }}" data-toggle="tooltip" data-placement="top" title="Sarah" alt="avatar">
+                                        <img class="avatar-md" src="{{ asset('chatroom/dist/img/avatars/avatar-female-1.jpg') }}" data-toggle="tooltip" data-placement="top" title="Sarah" alt="avatar">
                                         <div class="status online"></div>
 
                                         <div class="data">
@@ -229,7 +229,7 @@
                                         </div>
                                     </a>
                                     <a href="#list-empty" class="filterDiscussions all unread single" id="list-empty-list" data-toggle="list" role="tab">
-                                        <img class="avatar-md" src="{{ asset('talkshak/dist/img/avatars/avatar-male-1.jpg') }}" data-toggle="tooltip" data-placement="top" title="Michael" alt="avatar">
+                                        <img class="avatar-md" src="{{ asset('chatroom/dist/img/avatars/avatar-male-1.jpg') }}" data-toggle="tooltip" data-placement="top" title="Michael" alt="avatar">
                                         <div class="status offline"></div>
 
                                         <div class="data">
@@ -242,7 +242,7 @@
                                         </div>
                                     </a>
                                     <a href="#list-chat" class="filterDiscussions all read single" id="list-chat-list2" data-toggle="list" role="tab">
-                                        <img class="avatar-md" src="{{ asset('talkshak/dist/img/avatars/avatar-female-2.jpg') }}" data-toggle="tooltip" data-placement="top" title="Lucy" alt="avatar">
+                                        <img class="avatar-md" src="{{ asset('chatroom/dist/img/avatars/avatar-female-2.jpg') }}" data-toggle="tooltip" data-placement="top" title="Lucy" alt="avatar">
                                         <div class="status online"></div>
                                         <div class="data">
                                             <h5>Lucy Grey</h5>
@@ -251,7 +251,7 @@
                                         </div>
                                     </a>
                                     <a href="#list-empty" class="filterDiscussions all read single" id="list-empty-list2" data-toggle="list" role="tab">
-                                        <img class="avatar-md" src="{{ asset('talkshak/dist/img/avatars/avatar-male-2.jpg') }}" data-toggle="tooltip" data-placement="top" title="james idoms" alt="avatar">
+                                        <img class="avatar-md" src="{{ asset('chatroom/dist/img/avatars/avatar-male-2.jpg') }}" data-toggle="tooltip" data-placement="top" title="james idoms" alt="avatar">
                                         <div class="status offline"></div>
                                         <div class="data">
                                             <h5>james idoms</h5>
@@ -260,7 +260,7 @@
                                         </div>
                                     </a>
                                     <a href="#list-chat" class="filterDiscussions all read single" id="list-chat-list3" data-toggle="list" role="tab">
-                                        <img class="avatar-md" src="{{ asset('talkshak/dist/img/avatars/avatar-female-3.jpg') }}" data-toggle="tooltip" data-placement="top" title="Linda Gates" alt="avatar">
+                                        <img class="avatar-md" src="{{ asset('chatroom/dist/img/avatars/avatar-female-3.jpg') }}" data-toggle="tooltip" data-placement="top" title="Linda Gates" alt="avatar">
                                         <div class="status away"></div>
                                         <div class="data">
                                             <h5>Linda gates</h5>
@@ -269,7 +269,7 @@
                                         </div>
                                     </a>
                                     <a href="#list-empty" class="filterDiscussions all read single" id="list-empty-list3" data-toggle="list" role="tab">
-                                        <img class="avatar-md" src="{{ asset('talkshak/dist/img/avatars/avatar-female-5.jpg') }}" data-toggle="tooltip" data-placement="top" title="Karen joye" alt="avatar">
+                                        <img class="avatar-md" src="{{ asset('chatroom/dist/img/avatars/avatar-female-5.jpg') }}" data-toggle="tooltip" data-placement="top" title="Karen joye" alt="avatar">
                                         <div class="status online"></div>
                                         <div class="data">
                                             <h5>Karen joye</h5>
@@ -278,7 +278,7 @@
                                         </div>
                                     </a>
                                     <a href="#list-chat" class="filterDiscussions all unread single" id="list-chat-list4" data-toggle="list" role="tab">
-                                        <img class="avatar-md" src="{{ asset('talkshak/dist/img/avatars/avatar-female-6.jpg') }}" data-toggle="tooltip" data-placement="top" title="Lisa Honey" alt="avatar">
+                                        <img class="avatar-md" src="{{ asset('chatroom/dist/img/avatars/avatar-female-6.jpg') }}" data-toggle="tooltip" data-placement="top" title="Lisa Honey" alt="avatar">
                                         <div class="status offline"></div>
 
                                         <div class="data">
@@ -291,7 +291,7 @@
                                         </div>
                                     </a>
                                     <a href="#list-empty" class="filterDiscussions all read single" id="list-empty-list4" data-toggle="list" role="tab">
-                                        <img class="avatar-md" src="{{ asset('talkshak/dist/img/avatars/avatar-male-3.jpg') }}" data-toggle="tooltip" data-placement="top" title="Daniel Cabral" alt="avatar">
+                                        <img class="avatar-md" src="{{ asset('chatroom/dist/img/avatars/avatar-male-3.jpg') }}" data-toggle="tooltip" data-placement="top" title="Daniel Cabral" alt="avatar">
                                         <div class="status offline"></div>
                                         <div class="data">
                                             <h5>Daniel Cabral</h5>
@@ -300,7 +300,7 @@
                                         </div>
                                     </a>
                                     <a href="#list-chat" class="filterDiscussions all unread single" id="list-chat-list5" data-toggle="list" role="tab">
-                                        <img class="avatar-md" src="{{ asset('talkshak/dist/img/avatars/avatar-male-4.jpg') }}" data-toggle="tooltip" data-placement="top" title="Jhon Doe" alt="avatar">
+                                        <img class="avatar-md" src="{{ asset('chatroom/dist/img/avatars/avatar-male-4.jpg') }}" data-toggle="tooltip" data-placement="top" title="Jhon Doe" alt="avatar">
                                         <div class="status online"></div>
 
                                         <div class="data">
@@ -318,8 +318,8 @@
                         <!-- End of Discussions -->
                         <!-- Start of Notifications -->
                         <div id="notifications" class="tab-pane fade">
-                            <figure class="setting"><img class="avatar-xl" src="{{ asset('talkshak/dist/img/avatars/avatar-male-1.jpg') }}" alt="avatar"></figure>
-                            <span class="logo"><img alt="" src="{{ asset('talkshak/dist/img/logo.png') }}"></span>
+                            <figure class="setting"><img class="avatar-xl" src="{{ asset('chatroom/dist/img/avatars/avatar-male-1.jpg') }}" alt="avatar"></figure>
+                            <span class="logo"><img alt="" src="{{ asset('chatroom/dist/img/logo.png') }}"></span>
                             <div class="search">
                                 <form class="form-inline position-relative">
                                     <input type="search" class="form-control" id="notice" placeholder="Filter notifications...">
@@ -336,15 +336,15 @@
                                 <h1>Notifications</h1>
                                 <div class="list-group" id="alerts" role="tablist">
                                     <a href="#" class="filterNotifications all latest notification" data-toggle="list">
-                                        <img class="avatar-md" src="{{ asset('talkshak/dist/img/avatars/avatar-female-1.jpg') }}" data-toggle="tooltip" data-placement="top" title="Sarah" alt="avatar">
+                                        <img class="avatar-md" src="{{ asset('chatroom/dist/img/avatars/avatar-female-1.jpg') }}" data-toggle="tooltip" data-placement="top" title="Sarah" alt="avatar">
                                         <div class="status online"></div>
                                         <div class="data">
-                                            <p>Sarah has accepted your friend request on Talkshak.</p>
+                                            <p>Sarah has accepted your friend request on chatroom.</p>
                                             <span>Oct 17, 2018</span>
                                         </div>
                                     </a>
                                     <a href="#" class="filterNotifications all latest notification" data-toggle="list">
-                                        <img class="avatar-md" src="{{ asset('talkshak/dist/img/avatars/avatar-male-1.jpg') }}" data-toggle="tooltip" data-placement="top" title="Michael" alt="avatar">
+                                        <img class="avatar-md" src="{{ asset('chatroom/dist/img/avatars/avatar-male-1.jpg') }}" data-toggle="tooltip" data-placement="top" title="Michael" alt="avatar">
                                         <div class="status online"></div>
                                         <div class="data">
                                             <p>Michael, you have a new friend suggestion today.</p>
@@ -352,7 +352,7 @@
                                         </div>
                                     </a>
                                     <a href="#" class="filterNotifications all latest notification" data-toggle="list">
-                                        <img class="avatar-md" src="{{ asset('talkshak/dist/img/avatars/avatar-male-2.jpg') }}" data-toggle="tooltip" data-placement="top" title="james idoms" alt="avatar">
+                                        <img class="avatar-md" src="{{ asset('chatroom/dist/img/avatars/avatar-male-2.jpg') }}" data-toggle="tooltip" data-placement="top" title="james idoms" alt="avatar">
                                         <div class="status online"></div>
                                         <div class="data">
                                             <p>james idoms have just sent you a new message.</p>
@@ -360,7 +360,7 @@
                                         </div>
                                     </a>
                                     <a href="#" class="filterNotifications all latest notification" data-toggle="list">
-                                        <img class="avatar-md" src="{{ asset('talkshak/dist/img/avatars/avatar-female-6.jpg') }}" data-toggle="tooltip" data-placement="top" title="Lisa Honey" alt="avatar">
+                                        <img class="avatar-md" src="{{ asset('chatroom/dist/img/avatars/avatar-female-6.jpg') }}" data-toggle="tooltip" data-placement="top" title="Lisa Honey" alt="avatar">
                                         <div class="status online"></div>
                                         <div class="data">
                                             <p>Lisa Honey has a birthday today. Wish her all the best.</p>
@@ -368,15 +368,15 @@
                                         </div>
                                     </a>
                                     <a href="#" class="filterNotifications all latest notification" data-toggle="list">
-                                        <img class="avatar-md" src="{{ asset('talkshak/dist/img/avatars/avatar-female-3.jpg') }}" data-toggle="tooltip" data-placement="top" title="Sarah" alt="avatar">
+                                        <img class="avatar-md" src="{{ asset('chatroom/dist/img/avatars/avatar-female-3.jpg') }}" data-toggle="tooltip" data-placement="top" title="Sarah" alt="avatar">
                                         <div class="status online"></div>
                                         <div class="data">
-                                            <p>Linda Gates has accepted your friend request on Talkshak.</p>
+                                            <p>Linda Gates has accepted your friend request on chatroom.</p>
                                             <span>Jan 5, 2018</span>
                                         </div>
                                     </a>
                                     <a href="#" class="filterNotifications all oldest notification" data-toggle="list">
-                                        <img class="avatar-md" src="{{ asset('talkshak/dist/img/avatars/avatar-female-5.jpg') }}" data-toggle="tooltip" data-placement="top" title="Sarah" alt="avatar">
+                                        <img class="avatar-md" src="{{ asset('chatroom/dist/img/avatars/avatar-female-5.jpg') }}" data-toggle="tooltip" data-placement="top" title="Sarah" alt="avatar">
                                         <div class="status offline"></div>
                                         <div class="data">
                                             <p>Karen joye have just sent you a new message.</p>
@@ -384,7 +384,7 @@
                                         </div>
                                     </a>
                                     <a href="#" class="filterNotifications all oldest notification" data-toggle="list">
-                                        <img class="avatar-md" src="{{ asset('talkshak/dist/img/avatars/avatar-female-2.jpg') }}" data-toggle="tooltip" data-placement="top" title="Sarah" alt="avatar">
+                                        <img class="avatar-md" src="{{ asset('chatroom/dist/img/avatars/avatar-female-2.jpg') }}" data-toggle="tooltip" data-placement="top" title="Sarah" alt="avatar">
                                         <div class="status offline"></div>
                                         <div class="data">
                                             <p>Michael, you have a new friend suggestion today.</p>
@@ -392,7 +392,7 @@
                                         </div>
                                     </a>
                                     <a href="#" class="filterNotifications all oldest notification" data-toggle="list">
-                                        <img class="avatar-md" src="{{ asset('talkshak/dist/img/avatars/avatar-male-3.jpg') }}" data-toggle="tooltip" data-placement="top" title="Sarah" alt="avatar">
+                                        <img class="avatar-md" src="{{ asset('chatroom/dist/img/avatars/avatar-male-3.jpg') }}" data-toggle="tooltip" data-placement="top" title="Sarah" alt="avatar">
                                         <div class="status offline"></div>
                                         <div class="data">
                                             <p>Daniel Cabral have just sent you a new message.</p>
@@ -400,7 +400,7 @@
                                         </div>
                                     </a>
                                     <a href="#" class="filterNotifications all oldest notification" data-toggle="list">
-                                        <img class="avatar-md" src="{{ asset('talkshak/dist/img/avatars/avatar-male-4.jpg') }}" data-toggle="tooltip" data-placement="top" title="Sarah" alt="avatar">
+                                        <img class="avatar-md" src="{{ asset('chatroom/dist/img/avatars/avatar-male-4.jpg') }}" data-toggle="tooltip" data-placement="top" title="Sarah" alt="avatar">
                                         <div class="status offline"></div>
                                         <div class="data">
                                             <p>Jhon Doe has a birthday today. Wish him all the best.</p>
@@ -415,7 +415,7 @@
                         <div class="tab-pane fade" id="settings">
                             <div class="settings">
                                 <div class="profile">
-                                    <img class="avatar-xl" src="{{ asset('talkshak/dist/img/avatars/avatar-male-1.jpg') }}" alt="avatar">
+                                    <img class="avatar-xl" src="{{ asset('chatroom/dist/img/avatars/avatar-male-1.jpg') }}" alt="avatar">
                                     <h1><a href="#">Bob Frank</a></h1>
                                     <span>New York, USA</span>
 
@@ -436,7 +436,7 @@
                                             <div class="content">
                                                 <div class="upload">
                                                     <div class="data">
-                                                        <img class="avatar-xl" src="{{ asset('talkshak/dist/img/avatars/avatar-male-1.jpg') }}" alt="image">
+                                                        <img class="avatar-xl" src="{{ asset('chatroom/dist/img/avatars/avatar-male-1.jpg') }}" alt="image">
                                                         <label>
                                                             <input type="file">
                                                             <span class="btn button">Upload avatar</span>
@@ -518,7 +518,7 @@
                                                 <div class="set">
                                                     <div class="details">
                                                         <h5>Desktop Notifications</h5>
-                                                        <p>You can set up Talkshak to receive notifications when you have new messages.</p>
+                                                        <p>You can set up chatroom to receive notifications when you have new messages.</p>
                                                     </div>
                                                     <label class="switch">
                                                         <input type="checkbox" checked>
@@ -528,7 +528,7 @@
                                                 <div class="set">
                                                     <div class="details">
                                                         <h5>Unread Message Badge</h5>
-                                                        <p>If enabled shows a red badge on the Talkshak app icon when you have unread messages.</p>
+                                                        <p>If enabled shows a red badge on the chatroom app icon when you have unread messages.</p>
                                                     </div>
                                                     <label class="switch">
                                                         <input type="checkbox" checked>
@@ -538,7 +538,7 @@
                                                 <div class="set">
                                                     <div class="details">
                                                         <h5>Taskbar Flashing</h5>
-                                                        <p>Flashes the Talkshak app on mobile in your taskbar when you have new notifications.</p>
+                                                        <p>Flashes the chatroom app on mobile in your taskbar when you have new notifications.</p>
                                                     </div>
                                                     <label class="switch">
                                                         <input type="checkbox">
@@ -592,7 +592,7 @@
                                         <div class="collapse" id="collapseFour" aria-labelledby="headingFour" data-parent="#accordionSettings">
                                             <div class="content">
                                                 <div class="app">
-                                                    <img src="{{ asset('talkshak/dist/img/integrations/slack.svg') }}" alt="app">
+                                                    <img src="{{ asset('chatroom/dist/img/integrations/slack.svg') }}" alt="app">
                                                     <div class="permissions">
                                                         <h5>Skrill</h5>
                                                         <p>Read, Write, Comment</p>
@@ -603,7 +603,7 @@
                                                     </label>
                                                 </div>
                                                 <div class="app">
-                                                    <img src="{{ asset('talkshak/dist/img/integrations/dropbox.svg') }}" alt="app">
+                                                    <img src="{{ asset('chatroom/dist/img/integrations/dropbox.svg') }}" alt="app">
                                                     <div class="permissions">
                                                         <h5>Dropbox</h5>
                                                         <p>Read, Write, Upload</p>
@@ -614,7 +614,7 @@
                                                     </label>
                                                 </div>
                                                 <div class="app">
-                                                    <img src="{{ asset('talkshak/dist/img/integrations/drive.svg') }}" alt="app">
+                                                    <img src="{{ asset('chatroom/dist/img/integrations/drive.svg') }}" alt="app">
                                                     <div class="permissions">
                                                         <h5>Google Drive</h5>
                                                         <p>No permissions set</p>
@@ -625,7 +625,7 @@
                                                     </label>
                                                 </div>
                                                 <div class="app">
-                                                    <img src="{{ asset('talkshak/dist/img/integrations/trello.svg') }}" alt="app">
+                                                    <img src="{{ asset('chatroom/dist/img/integrations/trello.svg') }}" alt="app">
                                                     <div class="permissions">
                                                         <h5>Trello</h5>
                                                         <p>No permissions set</p>
@@ -645,7 +645,7 @@
                                             <i class="ti-pencil"></i>
                                             <div class="data">
                                                 <h5>Appearance</h5>
-                                                <p>Customize the look of Talkshak</p>
+                                                <p>Customize the look of chatroom</p>
                                             </div>
                                             <i class="ti-angle-down"></i>
                                         </a>
@@ -754,7 +754,7 @@
                                                 <div class="set">
                                                     <div class="details">
                                                         <h5>Data to Customize</h5>
-                                                        <p>This settings allows us to use your information to customize Talkshak for you.</p>
+                                                        <p>This settings allows us to use your information to customize chatroom for you.</p>
                                                     </div>
                                                     <label class="switch">
                                                         <input type="checkbox">
@@ -799,7 +799,7 @@
                                 <label for="user">Username:</label>
                                 <input type="text" class="form-control" id="user" placeholder="Add recipient..." required>
                                 <div class="user" id="contact">
-                                    <img class="avatar-sm" src="{{ asset('talkshak/dist/img/avatars/avatar-female-5.jpg') }}" alt="avatar">
+                                    <img class="avatar-sm" src="{{ asset('chatroom/dist/img/avatars/avatar-female-5.jpg') }}" alt="avatar">
                                     <h5>Karen joye</h5>
                                     <button type="reset" class="btn"><i class="ti-close"></i></button>
                                 </div>
@@ -828,7 +828,7 @@
                                 <label for="participant">Recipient:</label>
                                 <input type="text" class="form-control" id="participant" placeholder="Add recipient..." required>
                                 <div class="user" id="recipient">
-                                    <img class="avatar-sm" src="{{ asset('talkshak/dist/img/avatars/avatar-female-5.jpg') }}" alt="avatar">
+                                    <img class="avatar-sm" src="{{ asset('chatroom/dist/img/avatars/avatar-female-5.jpg') }}" alt="avatar">
                                     <h5>Karen joye</h5>
                                     <button type="reset" class="btn"><i class="ti-close"></i></button>
                                 </div>
@@ -901,7 +901,7 @@
                                         <hr>
                                     </div>
                                     <div class="message">
-                                        <img class="avatar-md" src="{{ asset('talkshak/dist/img/avatars/avatar-female-5.jpg') }}" data-toggle="tooltip" data-placement="top" title="Karen joye" alt="avatar">
+                                        <img class="avatar-md" src="{{ asset('chatroom/dist/img/avatars/avatar-female-5.jpg') }}" data-toggle="tooltip" data-placement="top" title="Karen joye" alt="avatar">
                                         <div class="text-main">
                                             <div class="text-group">
                                                 <div class="text">
@@ -922,7 +922,7 @@
                                         </div>
                                     </div>
                                     <div class="message">
-                                        <img class="avatar-md" src="{{ asset('talkshak/dist/img/avatars/avatar-female-5.jpg') }}" data-toggle="tooltip" data-placement="top" title="Karen joye" alt="avatar">
+                                        <img class="avatar-md" src="{{ asset('chatroom/dist/img/avatars/avatar-female-5.jpg') }}" data-toggle="tooltip" data-placement="top" title="Karen joye" alt="avatar">
                                         <div class="text-main">
                                             <div class="text-group">
                                                 <div class="text">
@@ -948,7 +948,7 @@
                                         </div>
                                     </div>
                                     <div class="message">
-                                        <img class="avatar-md" src="{{ asset('talkshak/dist/img/avatars/avatar-female-5.jpg') }}" data-toggle="tooltip" data-placement="top" title="Karen joye" alt="avatar">
+                                        <img class="avatar-md" src="{{ asset('chatroom/dist/img/avatars/avatar-female-5.jpg') }}" data-toggle="tooltip" data-placement="top" title="Karen joye" alt="avatar">
                                         <div class="text-main">
                                             <div class="text-group">
                                                 <div class="text">
@@ -974,7 +974,7 @@
                                         </div>
                                     </div>
                                     <div class="message">
-                                        <img class="avatar-md" src="{{ asset('talkshak/dist/img/avatars/avatar-female-5.jpg') }}" data-toggle="tooltip" data-placement="top" title="Karen joye" alt="avatar">
+                                        <img class="avatar-md" src="{{ asset('chatroom/dist/img/avatars/avatar-female-5.jpg') }}" data-toggle="tooltip" data-placement="top" title="Karen joye" alt="avatar">
                                         <div class="text-main">
                                             <div class="text-group">
                                                 <div class="text">
@@ -1001,7 +1001,7 @@
                                         </div>
                                     </div>
                                     <div class="message">
-                                        <img class="avatar-md" src="{{ asset('talkshak/dist/img/avatars/avatar-female-5.jpg') }}" data-toggle="tooltip" data-placement="top" title="Karen joye" alt="avatar">
+                                        <img class="avatar-md" src="{{ asset('chatroom/dist/img/avatars/avatar-female-5.jpg') }}" data-toggle="tooltip" data-placement="top" title="Karen joye" alt="avatar">
                                         <div class="text-main">
                                             <div class="text-group">
                                                 <div class="text typing">
@@ -1066,7 +1066,7 @@
                                     <div class="inside">
                                         <div class="panel">
                                             <div class="participant">
-                                                <img class="avatar-xxl" src="{{ asset('talkshak/dist/img/avatars/avatar-female-5.jpg') }}" alt="avatar">
+                                                <img class="avatar-xxl" src="{{ asset('chatroom/dist/img/avatars/avatar-female-5.jpg') }}" alt="avatar">
                                                 <span>Connecting to Sarah</span>
                                                 <div class="wave">
                                                     <span class="dot"></span>
@@ -1184,7 +1184,7 @@
                                     <div class="inside">
                                         <div class="panel">
                                             <div class="participant">
-                                                <img class="avatar-xxl" src="{{ asset('talkshak/dist/img/avatars/avatar-female-2.jpg') }}" alt="avatar">
+                                                <img class="avatar-xxl" src="{{ asset('chatroom/dist/img/avatars/avatar-female-2.jpg') }}" alt="avatar">
                                                 <span>Connecting to sarah</span>
                                                 <div class="wave">
                                                     <span class="dot"></span>
@@ -1215,11 +1215,11 @@
     </div> <!-- Layout -->
 </main>
 
-<script src="{{ asset('talkshak/dist/js/jquery3.3.1.js') }}"></script>
-<script src="{{ asset('talkshak/dist/js/vendor/jquery-slim.min.js') }}"></script>
-<script src="{{ asset('talkshak/dist/js/vendor/popper.min.js') }}"></script>
-<script src="{{ asset('talkshak/dist/js/bootstrap.min.js') }}"></script>
-<script src="{{ asset('talkshak/dist/js/perfect-scrollbar.min.js') }}"></script>
-<script src="{{ asset('talkshak/dist/js/script.js') }}"></script>
+<script src="{{ asset('chatroom/dist/js/jquery3.3.1.js') }}"></script>
+<script src="{{ asset('chatroom/dist/js/vendor/jquery-slim.min.js') }}"></script>
+<script src="{{ asset('chatroom/dist/js/vendor/popper.min.js') }}"></script>
+<script src="{{ asset('chatroom/dist/js/bootstrap.min.js') }}"></script>
+<script src="{{ asset('chatroom/dist/js/perfect-scrollbar.min.js') }}"></script>
+<script src="{{ asset('chatroom/dist/js/script.js') }}"></script>
 </body>
 </html>

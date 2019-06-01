@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="" />
     <meta name="keywords" content="" />
-    <title>Talkshak – chat messenger</title>
-    <link href="{{ asset('talkshak/dist/img/favicon.png') }}" type="image/png" rel="icon">
-    <link rel="stylesheet" href="{{ asset('talkshak/dist/css/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('talkshak/dist/css/perfect-scrollbar.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('talkshak/dist/css/themify-icons.css') }}">
-    <link rel="stylesheet" href="{{ asset('talkshak/dist/css/emoji.css') }}">
-    <link rel="stylesheet" href="{{ asset('talkshak/dist/css/style.css') }}">
-    <link rel="stylesheet" href="{{ asset('talkshak/dist/css/responsive.css') }}">
+    <title>ChatRoom – chat messenger</title>
+    <link href="{{ asset('chatroom/dist/img/favicon.png') }}" type="image/png" rel="icon">
+    <link rel="stylesheet" href="{{ asset('chatroom/dist/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('chatroom/dist/css/perfect-scrollbar.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('chatroom/dist/css/themify-icons.css') }}">
+    <link rel="stylesheet" href="{{ asset('chatroom/dist/css/emoji.css') }}">
+    <link rel="stylesheet" href="{{ asset('chatroom/dist/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('chatroom/dist/css/responsive.css') }}">
 </head>
 <body class="start">
 <main>
@@ -25,7 +25,7 @@
                             <div class="register-content">
                                 <div class="login-header">
                                     <div class="logo">
-                                        <img src="{{ asset('talkshak/dist/img/logo2.png') }}" alt="">
+                                        <img src="{{ asset('chatroom/dist/img/logo2.png') }}" alt="">
                                     </div>
                                     <h1><i class="ti-key"></i>{{ __('Login') }}</h1>
                                 </div>
@@ -54,7 +54,7 @@
                         </div>
                         <div class="col-lg-8 col-md-6">
                             <div class="page-meta">
-                                <h2>Talkshak is a simplest and friendly interface Messagner or plateform.</h2>
+                                <h2>ChatRoom is a simplest and friendly interface Messagner or plateform.</h2>
                                 <span>login now and enjoy!</span>
                             </div>
                         </div>
@@ -64,11 +64,11 @@
         </div>
     </div>
 </main>
-<script src="{{ asset('talkshak/dist/js/jquery3.3.1.js') }}"></script>
-<script src="{{ asset('talkshak/dist/js/vendor/jquery-slim.min.js') }}"></script>
-<script src="{{ asset('talkshak/dist/js/vendor/popper.min.js') }}"></script>
-<script src="{{ asset('talkshak/dist/js/bootstrap.min.js') }}"></script>
-<script src="{{ asset('talkshak/dist/js/perfect-scrollbar.min.js') }}"></script>
-<script src="{{ asset('talkshak/dist/js/script.js') }}"></script>
+<script src="{{ asset('chatroom/dist/js/jquery3.3.1.js') }}"></script>
+<script src="{{ asset('chatroom/dist/js/vendor/jquery-slim.min.js') }}"></script>
+<script src="{{ asset('chatroom/dist/js/vendor/popper.min.js') }}"></script>
+<script src="{{ asset('chatroom/dist/js/bootstrap.min.js') }}"></script>
+<script src="{{ asset('chatroom/dist/js/perfect-scrollbar.min.js') }}"></script>
+<script src="{{ asset('chatroom/dist/js/script.js') }}"></script>
 </body>
 </html>
