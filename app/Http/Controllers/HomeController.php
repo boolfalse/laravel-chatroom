@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\View;
 
 class HomeController extends Controller
 {
@@ -25,6 +28,13 @@ class HomeController extends Controller
 
     public function chatroom()
     {
-        return view('chatroom');
+        $users = User::where('id', '!=', Auth::user()->id)->get();
+        $speaker = $users->first();
+
+        View::share('users', $users);
+
+        return view('chatroom.chat-dialog', [
+            'speaker' => $speaker,
+        ]);
     }
 }

@@ -24,6 +24,8 @@ class User extends Authenticatable
         'image',
         'storage_original_image_path',
         'status',
+
+        'first_name',
     ];
 
     protected $hidden = [
@@ -31,6 +33,10 @@ class User extends Authenticatable
         'new_password',
         'remember_token',
     ];
+
+//    protected $appends = [
+//        'first_name',
+//    ];
 
     protected $casts = [
         'email_verified_at' => 'datetime',
@@ -40,4 +46,11 @@ class User extends Authenticatable
 //    {
 //        $this->attributes['password'] = bcrypt($password);
 //    }
+
+    // ACCESSORS
+    public function getFirstNameAttribute($user)
+    {
+        return explode(' ', $this->name, 2)[0];
+    }
+
 }
