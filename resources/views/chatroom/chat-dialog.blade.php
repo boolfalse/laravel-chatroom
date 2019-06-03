@@ -50,125 +50,21 @@
                 <div class="content" id="content">
                     <div class="container">
                         <div class="col-md-12">
-                            <div class="date">
-                                <hr>
-                                <span>Yesterday</span>
-                                <hr>
-                            </div>
-                            <div class="message">
-                                <img class="avatar-md" src="{{ asset('uploads/' . config('custom.user_images_folder') . '/small/' . $speaker->image) }}" data-toggle="tooltip" data-placement="top" title="{{ $speaker->name }}" alt="avatar">
-                                <div class="text-main">
-                                    <div class="text-group">
-                                        <div class="text">
-                                            <p>Where was i, i worry about my viewrs missing me too much!</p>
-                                        </div>
-                                    </div>
-                                    <span>09:46 AM</span>
-                                </div>
-                            </div>
-                            <div class="message me">
-                                <div class="text-main">
-                                    <div class="text-group me">
-                                        <div class="text me">
-                                            <p>But if you are not available to talk, then would't they miss you more?</p>
-                                        </div>
-                                    </div>
-                                    <span>11:32 AM</span>
-                                </div>
-                            </div>
-                            <div class="message">
-                                <img class="avatar-md" src="{{ asset('uploads/' . config('custom.user_images_folder') . '/small/' . $speaker->image) }}" data-toggle="tooltip" data-placement="top" title="{{ $speaker->name }}" alt="avatar">
-                                <div class="text-main">
-                                    <div class="text-group">
-                                        <div class="text">
-                                            <p>Aren't you sweet.</p>
-                                        </div>
-                                    </div>
-                                    <span>02:56 PM</span>
-                                </div>
-                            </div>
-                            <div class="message me">
-                                <div class="text-main">
-                                    <div class="text-group me">
-                                        <div class="text me">
-                                            <p>That's not an answer..</p>
-                                        </div>
-                                    </div>
-                                    <div class="text-group me">
-                                        <div class="text me">
-                                            <p>I am tres sorry, what were you saying?</p>
-                                        </div>
-                                    </div>
-                                    <span>10:21 PM</span>
-                                </div>
-                            </div>
-                            <div class="message">
-                                <img class="avatar-md" src="{{ asset('uploads/' . config('custom.user_images_folder') . '/small/' . $speaker->image) }}" data-toggle="tooltip" data-placement="top" title="{{ $speaker->name }}" alt="avatar">
-                                <div class="text-main">
-                                    <div class="text-group">
-                                        <div class="text">
-                                            <p>Great start guys, why can you only talk at certain time on certain days?</p>
-                                        </div>
-                                    </div>
-                                    <span>11:07 PM</span>
-                                </div>
-                            </div>
-                            <div class="date">
-                                <hr>
-                                <span>Today</span>
-                                <hr>
-                            </div>
-                            <div class="message me">
-                                <div class="text-main">
-                                    <div class="text-group me">
-                                        <div class="text me">
-                                            <p>hmmmm, Well done all. send me document please</p>
-                                        </div>
-                                    </div>
-                                    <span>10:21 PM</span>
-                                </div>
-                            </div>
-                            <div class="message">
-                                <img class="avatar-md" src="{{ asset('uploads/' . config('custom.user_images_folder') . '/small/' . $speaker->image) }}" data-toggle="tooltip" data-placement="top" title="{{ $speaker->name }}" alt="avatar">
-                                <div class="text-main">
-                                    <div class="text-group">
-                                        <div class="text">
-                                            <div class="attachment">
-                                                <button class="btn attach" title="Click to download"><i class="ti-file"></i></button>
-                                                <div class="file">
-                                                    <h5><a href="#" title="Click to download">Policy Sheet.pdf</a></h5>
-                                                    <span>80kb Document</span>
-                                                </div>
+                            @foreach($conversations->reverse() as $conversation)
+                                <div class="message {{ $user->id == $conversation->user_id ? 'me' : '' }}">
+                                    @if($user->id != $conversation->user_id)
+                                    <img class="avatar-md" src="{{ asset('uploads/' . config('custom.user_images_folder') . '/small/' . $speaker->image) }}" data-toggle="tooltip" data-placement="top" title="{{ $speaker->name }}" alt="avatar">
+                                    @endif
+                                    <div class="text-main">
+                                        <div class="text-group">
+                                            <div class="text">
+                                                <p>{{ $conversation->text }}</p>
                                             </div>
                                         </div>
-                                    </div>
-                                    <span>11:07 PM</span>
-                                </div>
-                            </div>
-                            <div class="message me">
-                                <div class="text-main">
-                                    <div class="text-group me">
-                                        <div class="text me">
-                                            <p>i have received the .pdf document please send me jpeg file for our requirement..</p>
-                                        </div>
-                                    </div>
-                                    <span><i class="ti-check"></i>10:21 PM</span>
-                                </div>
-                            </div>
-                            <div class="message">
-                                <img class="avatar-md" src="{{ asset('uploads/' . config('custom.user_images_folder') . '/small/' . $speaker->image) }}" data-toggle="tooltip" data-placement="top" title="{{ $speaker->name }}" alt="avatar">
-                                <div class="text-main">
-                                    <div class="text-group">
-                                        <div class="text typing">
-                                            <div class="wave">
-                                                <span class="dot"></span>
-                                                <span class="dot"></span>
-                                                <span class="dot"></span>
-                                            </div>
-                                        </div>
+                                        <span>{{ $conversation->written }}</span>
                                     </div>
                                 </div>
-                            </div>
+                            @endforeach
                         </div>
                     </div>
                 </div>

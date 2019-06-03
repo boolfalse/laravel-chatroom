@@ -21,6 +21,7 @@ class User extends Authenticatable
         'email',
         'password',
         'confirm_token',
+        'dialog_channel_ids',
         'image',
         'storage_original_image_path',
         'status',
@@ -39,8 +40,13 @@ class User extends Authenticatable
 //    ];
 
     protected $casts = [
+        'dialog_channel_ids' => 'array',
         'email_verified_at' => 'datetime',
     ];
+
+    public function conversationsForDialogChannel($dialog_channel_id){
+        return $this->hasMany(Conversation::class, 'user_id', 'id')->where('dialog_channel_id', $dialog_channel_id);
+    }
 
 //    public function setChangePasswordAttribute($password)
 //    {

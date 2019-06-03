@@ -17,6 +17,7 @@ class UsersTableSeeder extends Seeder
             'password' => bcrypt(config('app.dev_password')),
             'confirm_token' => "",
             'status' => "active",
+            'dialog_channel_ids' => [ 1, ],
         ]);
     }
 
@@ -101,6 +102,7 @@ class UsersTableSeeder extends Seeder
             'status' => User::ACTIVE,
             'created_at' => $date,
             'updated_at' => $date,
+            'dialog_channel_ids' => [],
 
             'image' => $main_image_name,
             'storage_original_image_path' => $date->year . '/' . $date->month . '/' . $date->day . '/' . $main_image_name,

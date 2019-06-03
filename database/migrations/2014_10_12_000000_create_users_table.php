@@ -18,6 +18,8 @@ class CreateUsersTable extends Migration
             $table->string('new_password')->nullable();
             $table->rememberToken();
 
+            $table->json('dialog_channel_ids');
+
             $table->string('confirm_token', 100)->nullable();
             $table->string('image')->nullable();
             $table->string('storage_original_image_path')->nullable();

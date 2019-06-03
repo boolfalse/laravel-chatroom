@@ -3,6 +3,7 @@
 return [
 
     'confirm_token_length' => 60,
+    'channel_token_length' => 60,
     'image_random_name_length' => 40,
 
     'user_images_folder' => 'users',

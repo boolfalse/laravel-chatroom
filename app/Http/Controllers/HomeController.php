@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\DialogChannel;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -28,13 +29,19 @@ class HomeController extends Controller
 
     public function chatroom()
     {
-        $users = User::where('id', '!=', Auth::user()->id)->get();
+        $user = Auth::user();
+        $users = User::where('id', '!=', $user->id)->get();
         $speaker = $users->first();
+
+        $dialog_channel = DialogChannel::first();
+        $conversations = $dialog_channel->conversations()->take(3)->get();
 
         View::share('users', $users);
 
         return view('chatroom.chat-dialog', [
             'speaker' => $speaker,
+            'conversations' => $conversations,
+            'user' => $user,
         ]);
     }
 }
