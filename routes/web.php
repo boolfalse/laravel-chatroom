@@ -27,6 +27,7 @@ Route::group([
 Route::get('/', 'HomeController@welcome')->name('welcome');
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/chat-room', 'HomeController@chatroom')->name('chatroom');
+Route::post('send-conversation', 'HomeController@send_conversation')->name('send_conversation');
 
 Route::fallback(function(){
     return response()->view('errors.404', [], 404);

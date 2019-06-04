@@ -43,13 +43,19 @@ if (token) {
  * allows your team to easily build robust real-time web applications.
  */
 
-// import Echo from 'laravel-echo'
+import Echo from 'laravel-echo'
 
-// window.Pusher = require('pusher-js');
+window.Pusher = require('pusher-js');
 
-// window.Echo = new Echo({
-//     broadcaster: 'pusher',
-//     key: process.env.MIX_PUSHER_APP_KEY,
-//     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
-//     encrypted: true
-// });
+//ss https://github.com/beyondcode/laravel-websockets/issues/86#issuecomment-454001203
+window.Echo = new Echo({
+    broadcaster: 'pusher',
+    key: process.env.MIX_PUSHER_APP_KEY,
+    cluster: process.env.MIX_PUSHER_APP_CLUSTER,
+    encrypted: false, // for pusher or custom https pusher (default is false). for pusher required true
+
+    wsHost: window.location.hostname,
+    wsPort: 6001,
+    disableStats: true,
+    enabledTransports: ['ws', 'wss'], // only use ws and wss as valid transports //ss https://stackoverflow.com/questions/41381444/websocket-connection-failed-error-during-websocket-handshake-unexpected-respon
+});

@@ -4,7 +4,7 @@
     @include('chatroom.head')
 </head>
 <body>
-<main>
+<main id="app">
     <div class="layout">
         @include('chatroom.navigation')
         @include('chatroom.sidebar')
@@ -16,6 +16,8 @@
     </div> <!-- Layout -->
 </main>
 
-@include('chatroom.scripts')
+<script src="{{ asset('js/app.js') }}"></script>
+@yield('scripts')
+
 </body>
 </html>

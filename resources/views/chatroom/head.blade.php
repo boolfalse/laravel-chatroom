@@ -4,6 +4,7 @@
 <meta name="keywords" content="" />
 <title>chatroom – chat messenger</title>
 <link href="{{ asset('chatroom/dist/img/favicon.png') }}" type="image/png" rel="icon">
+<meta name="csrf-token" content="{{ csrf_token() }}" />
 
 <link rel="stylesheet" href="{{ asset('chatroom/dist/css/bootstrap.min.css') }}">
 <link rel="stylesheet" href="{{ asset('chatroom/dist/css/perfect-scrollbar.min.css') }}">

@@ -49,30 +49,52 @@
                 </div>
                 <div class="content" id="content">
                     <div class="container">
-                        <div class="col-md-12">
-                            @foreach($conversations->reverse() as $conversation)
-                                <div class="message {{ $user->id == $conversation->user_id ? 'me' : '' }}">
-                                    @if($user->id != $conversation->user_id)
-                                    <img class="avatar-md" src="{{ asset('uploads/' . config('custom.user_images_folder') . '/small/' . $speaker->image) }}" data-toggle="tooltip" data-placement="top" title="{{ $speaker->name }}" alt="avatar">
-                                    @endif
-                                    <div class="text-main">
-                                        <div class="text-group">
-                                            <div class="text">
-                                                <p>{{ $conversation->text }}</p>
-                                            </div>
+
+
+
+{{--                        <div class="col-md-12">--}}
+{{--                            @foreach($conversations->reverse() as $conversation)--}}
+{{--                                <div class="message {{ $user->id == $conversation->user_id ? 'me' : '' }}">--}}
+{{--                                    @if($user->id != $conversation->user_id)--}}
+{{--                                    <img class="avatar-md" src="{{ asset('uploads/' . config('custom.user_images_folder') . '/small/' . $speaker->image) }}" data-toggle="tooltip" data-placement="top" title="{{ $speaker->name }}" alt="avatar">--}}
+{{--                                    @endif--}}
+{{--                                    <div class="text-main">--}}
+{{--                                        <div class="text-group">--}}
+{{--                                            <div class="text">--}}
+{{--                                                <p>{{ $conversation->text }}</p>--}}
+{{--                                            </div>--}}
+{{--                                        </div>--}}
+{{--                                        <span>{{ $conversation->written }}</span>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            @endforeach--}}
+{{--                        </div>--}}
+
+                        <div class="col-md-12" v-for="conversation in conversations">
+
+                            <div class="message">
+                                <img class="avatar-md" src="{{ asset('uploads/' . config('custom.user_images_folder') . '/small/' . $speaker->image) }}" data-toggle="tooltip" data-placement="top" title="{{ $speaker->name }}" alt="avatar">
+                                <div class="text-main">
+                                    <div class="text-group">
+                                        <div class="text">
+                                            <p>@{{conversation.text}}</p>
                                         </div>
-                                        <span>{{ $conversation->written }}</span>
                                     </div>
+                                    <span>@{{conversation.written}}</span>
                                 </div>
-                            @endforeach
+                            </div>
+
                         </div>
+
+
+
                     </div>
                 </div>
                 <div class="container">
                     <div class="col-md-12">
                         <div class="bottom">
                             <form class="text-area">
-                                <textarea class="form-control" placeholder="Start typing for reply..." rows="1"></textarea>
+                                <textarea id="conversation_text" class="form-control" placeholder="Start typing for reply..." rows="1" v-model="conversationBox"></textarea>
                                 <div class="add-smiles">
                                     <span title="add icon" class="em em-blush"></span>
                                 </div>
@@ -98,7 +120,7 @@
                                     <i class="em em-us"></i>
                                     <i class="em em-rose"></i>
                                 </div>
-                                <button type="submit" class="btn send"><i class="ti-location-arrow"></i></button>
+                                <button id="conversation_send" type="button" class="btn send" @click.prevent="sendConversation"><i class="ti-location-arrow"></i></button>
                             </form>
                             <label>
                                 <input type="file">
@@ -146,4 +168,42 @@
     </div>
 </div>
 
+@endsection
+
+@section('scripts')
+    <script>
+        const app = new Vue({
+            el: '#app',
+            data: {
+                conversations: {!! $conversations->toJson() !!},
+                conversationBox: '',
+                dialog_channel: {!! $dialog_channel->toJson() !!},
+            },
+            mounted() {
+                this.listen();
+            },
+            methods: {
+                sendConversation() {
+                    axios.post("{{ route('send_conversation') }}", {
+                        channel_token: this.dialog_channel.channel_token,
+                        text: this.conversationBox,
+                        _token: "{{ csrf_token() }}"
+                    })
+                        .then((response) => {
+                            this.conversations.unshift(response.data);
+                            this.conversationBox = '';
+                        })
+                        .catch((error) => {
+                            console.log(error);
+                        })
+                },
+                listen() {
+                    Echo.channel('conversation.' + this.dialog_channel.channel_token)
+                        .listen('NewConversation', (conversation) => {
+                            this.conversations.unshift(conversation);
+                        })
+                }
+            }
+        })
+    </script>
 @endsection
