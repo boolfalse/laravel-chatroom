@@ -43,7 +43,7 @@ class HomeController extends Controller
 
         return view('chatroom.chat-dialog', [
             'speaker' => $speaker,
-            'conversations' => $conversations,
+            'conversations' => $conversations->reverse()->values(), //ss https://laracasts.com/discuss/channels/laravel/help-please-how-to-get-the-last-number-of-records-in-asc-order?page=1#best-reply-296769
             'user' => $user,
             'dialog_channel' => $dialog_channel,
         ]);

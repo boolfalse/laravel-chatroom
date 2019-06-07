@@ -94,7 +94,7 @@
                     <div class="col-md-12">
                         <div class="bottom">
                             <form class="text-area">
-                                <textarea id="conversation_text" class="form-control" placeholder="Start typing for reply..." rows="1" v-model="conversationBox"></textarea>
+                                <textarea id="conversation_text" class="form-control" placeholder="Start typing for reply..." rows="1" v-model="newConversation"></textarea>
                                 <div class="add-smiles">
                                     <span title="add icon" class="em em-blush"></span>
                                 </div>
@@ -176,7 +176,7 @@
             el: '#app',
             data: {
                 conversations: {!! $conversations->toJson() !!},
-                conversationBox: '',
+                newConversation: '',
                 dialog_channel: {!! $dialog_channel->toJson() !!},
             },
             mounted() {
@@ -186,12 +186,23 @@
                 sendConversation() {
                     axios.post("{{ route('send_conversation') }}", {
                         channel_token: this.dialog_channel.channel_token,
-                        text: this.conversationBox,
+                        text: this.newConversation,
                         _token: "{{ csrf_token() }}"
                     })
                         .then((response) => {
-                            this.conversations.unshift(response.data);
-                            this.conversationBox = '';
+                            this.conversations.push(response.data);
+                            this.newConversation = '';
+
+                            // setTimeout(() => {
+                            //     var chatContainer = document.getElementById('content').getElementsByClassName('container')[0];
+                            //     var showedConversations = chatContainer.getElementsByClassName('message');
+                            //     var lastConversation = showedConversations[showedConversations.length - 1];
+                            //     chatContainer.scrollTop = chatContainer.style.height;
+                            //
+                            //     var chatlist = $('#content .container:first-child');
+                            //     chatlist.scrollTop(chatlist.height());
+                            // }, 1000);
+
                         })
                         .catch((error) => {
                             console.log(error);
