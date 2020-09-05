@@ -19,5 +19,5 @@ php artisan migrate
 php artisan db:seed
 ```
 
-### Developer
-    boolfalse@mail.ru
+[Source](https://wpkixx.com/html/talkshak/index-dark-skin.html)
+
